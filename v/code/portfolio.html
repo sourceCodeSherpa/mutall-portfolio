@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="./portfolio.css">
+        <!-- add different font to page using  -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display|Lora|Raleway|Pacifico|Lobster">
+    </head>
+    <body>
+        <!-- heading section that contains my image, name and date -->
+        <div class="profile_image_container">
+             <img src="./pp_joshua.jpg" alt="portfolio image"/>
+        </div>
+        <div class="heading_container">
+            <h1>Joshua Wairua</h1>
+        </div>
+        <div class="date_container">
+            <span id="datetime"></span>
+        </div>
+        <!-- a section on the left pane that shows who I am -->
+        <section class="about">
+            <h2>About Me</h2>
+            <p>
+                ~ Graduate: BSc(Math & Comp Sci), <a href="https://ku.ac.ke/" target="_blank">Kenyatta University</a> - 
+                Class of 2024<br>
+                ~ Aspiring Software Engineer<br>
+                ~ Current Intern at Mutall Data Managers<br>
+            </p>
+            <div class="logo_container">
+                <img src="./mutall_logo.jpeg" alt="mutall logo"/>
+            </div>
+        </section>
+        <!-- a section on the right pane that shows my workplan (what I do) -->
+        <section class="workplan">
+            <h2>Workplan:</h2>
+            <!-- showing list and sublists in a dropdown (details and summary elements)-->
+            <details open>
+                <summary>1. Portfolio: develop a  portflio webpage</summary>
+                <ul>
+                    <li>1.1. Use CSS grid to layout page ✓</li>
+                    <li>1.2. Comment on your code ✓</li>
+                    <li>1.3. Use borders to demarcate sections in grid layout ✓</li>
+                    <li>1.3. Hyperlink my name and school ✓</li>
+                </ul>      
+            </details>
+            <details open>
+                <summary>2. Field Experience: collecting data</summary>
+                    <ul>
+                        <li>2.1. Mobile setup for Ranics webapp ✓</li>
+                        <li>2.2. Collect data for Ranics in car-park ✓</li>
+                        <li>
+                            <details class="nested-details">
+                                <summary>2.3. Interrogate database of Ranics</summary>
+                                    <ul>
+                                        
+                                        <li>2.3.1. Install and configure DBeaver app ✓</li>
+                                        <li>2.3.2. Use DBeaver to access Ranics' DB ✓</li>
+                                    </ul>
+                            </details>
+                        </li>
+                        <li>2.4. Use SQL to merge two data sets ✓</li>
+                    </ul>
+            </details>
+            <details open>
+                <summary>3. Extend Mutall's Projects: using Python</summary>
+                <ul>
+                    <li>
+                        <details>
+                        <summary>3.1. Exploring IDEs ✓</summary>
+                        <ul>
+                            <li>3.1.1. Install and configure Python extensions in
+                            VS Code IDE ✓</li>
+                            <li>3.1.2. Familiarize with PyCharm IDE ✓</li>
+                        </ul>    
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                        <summary>3.2. Mainstream Python's capabilities to 
+                            existing Mutall's projects
+                        </summary>
+                            <ul>
+                                <li>3.2.1. Familiarize with Stella's inputs</li>
+                                <li>3.2.2. Run the code in various IDEs</li>
+                            </ul> 
+                        </details>
+                    </li>
+                </ul>
+            </details>
+        </section>     
+        <footer>
+            <!-- make the footer content content move across the page -->
+            <marquee>
+                <address id="contact">
+                    By <a href="https://docs.google.com/document/d/1SKYRLJSS2tAecTWcn13WLFXCPQOtozuxLKHgo0a7n0A/edit?usp=sharing" target="_blank">Joshua Wairua</a>
+                    Email: <a href="mailto:wairua.joshua@gmail.com">
+                                wairua.joshua@gmail.com
+                            </a>
+                    Tel: <a href="tel:+254724047924">+254724047924</a>
+                </address>
+            </marquee>
+        </footer>
+        <script>
+            //a function to get date and time
+            function updateDateTime() {
+                const now = new Date();
+                //
+                // converts the current date and time in the constant above as a string
+                const currentDateTime = now.toLocaleString('en-UK', {
+                    hour: 'numeric',
+                    minute: 'numeric',
+                    second: 'numeric',
+                    timeZoneName: 'long',
+                    hourCycle: 'h24',
+                    weekday: 'long',
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric'
+                    });
+                //
+                // updates the `textContent` property of the `span` element with the `id` of `datetime`
+                document.querySelector('#datetime').textContent = currentDateTime;
+            }
+            //
+            // call the `updateDateTime` function every second
+            setInterval(updateDateTime, 1000);
+            //
+            //function to open the details summary at first level
+            
+        </script>
+    </body>
+</html> 

@@ -1,0 +1,106 @@
+html, body {
+        height: 100%;
+        margin: 0;
+        font-family: 'Playfair Display', serif;
+        color: #003263;
+}
+
+/* use a grid system to layout the whole page */
+body {
+    display: grid;
+    grid-template-areas:
+        "image heading heading date"
+        "about about workplan workplan"
+        "footer footer footer footer";
+    grid-template-columns: auto repeat(3, 1fr);
+    grid-template-rows: 1fr 8fr 1fr;
+}
+
+/* draw border-lines along grid-lines of each section */
+.heading_container, .date_container, .about, .workplan, footer {
+    border: 1px solid #003263;
+}
+
+.profile_image_container{
+    grid-area: image;
+    border: 1px solid #003263;
+}
+
+/* resize image to fit image_container */
+.profile_image_container img {
+    height: 100%;
+    max-width: 50px;
+    object-fit: cover;
+}
+
+.heading_container {
+    grid-area: heading;
+}
+
+/* give h1 element a different font */
+h1 {
+    font-family: 'Raleway', 'Pacifico', sans-serif;
+    margin: 0;
+}
+
+.date_container {
+    grid-area: date;
+}
+
+/*format the datetime span to be bolder*/
+#datetime {
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+/*reduce the margin for h2 elements*/
+h2 {
+    margin: 4px;
+}
+
+/* edit the font size of contnent to be larger */
+.about, .workplan {
+    font-size: x-large;
+}
+
+.about {
+    grid-area: about;
+}
+
+/*add logo image of Mutall*/
+.logo_container img {
+    width: 100%;
+    height: 100%;
+}
+
+/* give all links a different color from default and remove underline */
+a {
+    color: #87CEFA;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+}
+
+/* remove the bullet points in lists */
+li {
+    list-style-type: none;
+    font-size: 0.85em;
+}
+
+/* add scrollbar to workplan section */
+.workplan {
+    grid-area: workplan;
+}
+
+/*indent the nestsed summary details to be in line with other list items*/
+.nested-details{
+    
+}
+
+/* align horizontally the footer content to center  */
+footer {
+    grid-area: footer;
+    text-align: center;
+}
