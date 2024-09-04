@@ -56,6 +56,7 @@ h1 {
 /*reduce the margin for h2 elements*/
 h2 {
     margin: 4px;
+    color: #FABC13;
 }
 
 /* edit the font size of contnent to be larger */
