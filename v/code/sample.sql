@@ -34,21 +34,25 @@
 --list all flow data
 -- select * from flow;
 -- list all stock and flow data in one table using Union
--- SELECT
---     stock, `session`, vehicle
--- FROM 
---     stock
--- WHERE
---     operator=26;
+SELECT
+    stock.stock, stock.`session`, stock.vehicle, operator.operator, operator.`name`
+FROM
+    stock
+INNER JOIN
+    operator
+ON
+    stock.operator = operator.operator
+WHERE
+    operator.`name` = "Joshua Wairua";
 
 
 -- list all stock and flow data in one table using Inner Join
-SELECT
-    stock.stock,
-    flow.operator,
-    vehicle.reg_no
-FROM
-    stock
-   INNER JOIN operator ON stock.operator = operator.operator
-   inner join vehicle on stock.vehicle= vehicle.vehicle
-   INNER JOIN flow ON flow.operator = operator.operator;
+-- SELECT
+--     stock.stock,
+--     flow.operator,
+--     vehicle.reg_no
+-- FROM
+--     stock
+--    INNER JOIN operator ON stock.operator = operator.operator
+--    inner join vehicle on stock.vehicle= vehicle.vehicle
+--    INNER JOIN flow ON flow.operator = operator.operator;
