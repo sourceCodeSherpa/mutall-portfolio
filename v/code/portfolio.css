@@ -68,6 +68,10 @@ h2 {
     grid-area: about;
 }
 
+p {
+    margin: 0;
+}
+
 /*add logo image of Mutall*/
 .logo_container img {
     width: 100%;
