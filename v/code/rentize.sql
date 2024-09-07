@@ -9,3 +9,11 @@ SELECT
     client, `name`, title
 FROM
     client;
+-- 
+-- list all clients that pay rent quarterly
+SELECT
+    client, `name`, title
+FROM
+    client
+WHERE
+    client.quarterly = 1;
