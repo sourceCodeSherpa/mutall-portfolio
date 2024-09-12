@@ -48,6 +48,7 @@ span.heading {
     font-size: 2em;
     color: #FABC13;
 }
+
 .date_container {
     grid-area: date;
 }
